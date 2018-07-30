@@ -55,7 +55,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new Dotenv(),
     new CleanWebpackPlugin(["dist"]),
     new HtmlWebpackPlugin({
       template: "src/index.html"
