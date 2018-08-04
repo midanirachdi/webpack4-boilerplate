@@ -42,7 +42,5 @@
       "transform-async-to-generator"
     ]
   },
-  "dependencies": {
-    "bcrypt": "^3.0.0"
-  }
+  "dependencies": {}
 }
