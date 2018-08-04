@@ -1,8 +1,8 @@
-const path = require("path"),
-      HtmlWebpackPlugin = require("html-webpack-plugin"),
-      CleanWebpackPlugin = require("clean-webpack-plugin"),
-      MiniCssExtractPlugin = require("mini-css-extract-plugin"),
-      Dotenv = require("dotenv-webpack");
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CleanWebpackPlugin from 'clean-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import Dotenv from 'dotenv-webpack';
 
 module.exports = {
   mode: "production",
@@ -60,7 +60,7 @@ module.exports = {
       template: "src/index.html"
     }),
     new MiniCssExtractPlugin({
-      filename: "style.css",
+      filename: "css/style.css",
       chunkFilename: "[id].css"
     }),
     new Dotenv()
