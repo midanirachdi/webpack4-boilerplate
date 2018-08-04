@@ -62,11 +62,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "style.css",
       chunkFilename: "[id].css"
-    })
+    }),
+    new Dotenv()
   ],
   devServer: {
     open: true,
-    port: 8080,
     overlay: {
       warnings: true,
       errors: true
