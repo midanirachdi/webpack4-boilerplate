@@ -31,19 +31,26 @@ module.exports = {
         use: ["html-loader"]
       },
       {
-        test: /\.(jpg|png)$/,
+        test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              name: "[name].[ext]", // keep the old name + extension instead of the hash
-              outputPath: "img/" //copy here
+              name: '[name].[ext]', // keep the old name + extension instead of the hash
+              outputPath: 'img/' //copy here
+            }
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true, // webpack@1.x
+              disable: true // webpack@2.x and newer
             }
           }
         ]
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
         use: [{
           loader: "file-loader",
           options: {
